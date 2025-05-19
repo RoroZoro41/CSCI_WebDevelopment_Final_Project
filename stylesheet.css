@@ -1,0 +1,15 @@
+body
+{
+    background-color: palegreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
