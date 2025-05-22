@@ -1,15 +1,84 @@
+/* Cool Colors
+#a6f29c pastel green
+#8a2be2 purple
+ */
+
 body
 {
-    background-color: palegreen;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
+    background-color: #a6f29c;
+    line-height: 1.15;
 }
 
-form
+p
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    /* color: #8a2be2; */
+}
+
+h1
+{
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding:5px; 
+    margin: 10px 40px 10px 40px;
+    font-family: Charcoal, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+span
+{
+    text-decoration: underline;
+    cursor: pointer;
+    background-color:  antiquewhite;
+    color: chocolate;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+}
+
+.modalText
+{
+    text-align: center;
+    align-self: center ;
+    color: antiquewhite;
+    text-shadow: 0px 0px 10px #000;
+}
+
+.modal-body
+{
+    background: linear-gradient(135deg, #a6f29c 0%, #8a2be2 100%);
+    box-shadow: 0 0 80px 20px rgba(0,0,0,0.5) inset;
+}
+
+#modal-image
+{
+    float: left; 
+    align-self: center;
+}
+
+#fursuit
 {
     display: flex;
-    flex-direction: column;
-    justify-self: center;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: whitesmoke; */
+    border: 5px solid black;
+    padding: 20px 10px 0px 10px;
+    margin: 10px;
+    gap: 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(155, 255, 248, 0.5) 20%, rgba(138,43,226,0.5) 100%);
+}
+
+#kobold
+{
+    height: 10%;
+}
+
+#fursuit-text
+{
+    font-size: large;
 }
