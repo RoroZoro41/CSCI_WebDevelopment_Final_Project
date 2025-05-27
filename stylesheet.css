@@ -6,7 +6,7 @@
  */
 
 body {
-    background: linear-gradient(135deg, #0E2148 0%, #483AA0 100%);
+    background: linear-gradient(135deg, #0E2148 0%, #483AA0 80%, #E3D095 130%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100vw 100vh;
@@ -71,13 +71,16 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
 }
 
 #Buttons a {
+    box-shadow: 0 0 8px #0E2148;
     background-color: #E3D095;
+    background: linear-gradient(45deg, #483AA0 0%, #E3D095 100%);
     color: #0E2148;
     padding: 30px 40px;
     border-radius: 20px;
     cursor: pointer;
-    transition: 50ms ease-out;
+    transition: 100ms ease-out;
     text-decoration: none;
+    text-shadow: 0px 0px 4px  #E3D095;
     font-size: 1.2em;
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -85,7 +88,9 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
 
 #Buttons a:hover {
     background-color: #483AA0;
+    background: linear-gradient(135deg, #E3D095 0%,  #483AA0 100%);
     color: #E3D095;
+    text-shadow: 0px 0px 4px  #0E2148;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -102,7 +107,8 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
     gap: 20px;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    justify-self: center;
     padding: 40px 5% 0 5% ; 
 }
 
@@ -118,15 +124,15 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
 }
 
 #content .span3 {
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 3;
     padding: 20px;
 }
 
-#Button{
+.Button{
     background-color: #E3D095;
     background: linear-gradient(45deg, #483AA0 0%, #E3D095 100%);
     color: #0E2148;
-    margin: 50px;
+    margin: 10px;
     text-align: center;
     padding: 3px;
     border-radius: 10px;
@@ -136,4 +142,19 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
     font-size: 1.2em;
     font-family: "Lato", sans-serif;
     font-weight: 400;
+}
+
+@media (max-width: 700px) {
+    #Buttons {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0;
+        bottom: 0; /* Make sure it's at the very bottom */
+    }
+    #Buttons a {
+        font-size: 1em;
+        padding: 16px 10px;
+        margin: 6px 12vw;
+        border-radius: 14px;
+    }
 }
