@@ -1,0 +1,139 @@
+/* Cool Colors
+#0E2148 Dark Blue
+#483AA0 Dark Purple
+#7965C1 Light Purple
+#E3D095 Milk Latte
+ */
+
+body {
+    background: linear-gradient(135deg, #0E2148 0%, #483AA0 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    color: #E3D095;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+#bigText {
+    font-size: 10vw;
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 10vh;
+    flex: 1 0 auto;
+}
+
+/* Set Lato as the default font for all text elements */
+p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Utility classes for special weights */
+.txts {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.txtb {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Buttons at the very bottom */
+#Buttons {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 25%;
+    margin: 0;
+    padding: 20px 0;
+    background: transparent;
+    z-index: 10;
+}
+
+#Buttons a {
+    background-color: #E3D095;
+    color: #0E2148;
+    padding: 30px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 50ms ease-out;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+#Buttons a:hover {
+    background-color: #483AA0;
+    color: #E3D095;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/*  */
+/*  */
+/*  */
+/* WHAT DO FURRIES DO */
+/*  */
+/*  */
+/*  */
+#content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 40px 5% 0 5% ; 
+}
+
+#content img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#content .span2 {
+    grid-column: 1 / span 2;
+    text-align: center;
+    padding: 20px;
+}
+
+#content .span3 {
+    grid-column: 2 / span 2;
+    padding: 20px;
+}
+
+#Button{
+    background-color: #E3D095;
+    background: linear-gradient(45deg, #483AA0 0%, #E3D095 100%);
+    color: #0E2148;
+    margin: 50px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 50ms ease-out;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
