@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Fandom</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts: Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!-- Collapsible Vertical Navbar -->
+    <nav class="navbar navbar-dark bg-dark flex-column p-3" style="position:fixed; top:0; left:0; height:100vh; width:220px; z-index:1050;">
+        <a class="navbar-brand mb-4" href="#">
+            <i class="fa-solid fa-paw"></i> FurryNav
+        </a>
+        <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sideNavbar" aria-controls="sideNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse show" id="sideNavbar">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-light" href="#">Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-light" href="#">About Furries</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-light" href="#">Activities</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-light" href="#">Why Join?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <div style="margin-left:220px;">
+        <p id="bigText" class="txtb">Furry Fandom</p>
+        <div id="Buttons">
+            <a>What is a furry?</a>
+            <a href="WhatDoFurriesDo.html">What do furries do?</a>
+            <a>Why be a furry?</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your JS (if needed) -->
+    <script defer src="javascript.js"></script>
+</body>
+</html>
