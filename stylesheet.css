@@ -6,10 +6,9 @@
  */
 
 body {
-    background: linear-gradient(135deg, #0E2148 0%, #483AA0 80%, #E3D095 130%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100vw 100vh;
+    background: linear-gradient(135deg, #0E2148 0%, #483AA0 100%);
+    background-size: 200% 200%;
+    animation: gradient-move 18s ease-in-out infinite alternate;
     color: #E3D095;
     font-family: "Lato", sans-serif;
     margin: 0;
@@ -74,6 +73,8 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 8px #0E2148;
     background-color: #E3D095;
     background: linear-gradient(45deg, #483AA0 0%, #E3D095 100%);
+    background-size: 200% 200%;
+    animation: gradient-move 5s ease-in-out infinite alternate;
     color: #0E2148;
     padding: 30px 40px;
     border-radius: 20px;
@@ -87,8 +88,9 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
 }
 
 #Buttons a:hover {
-    background-color: #483AA0;
     background: linear-gradient(135deg, #E3D095 0%,  #483AA0 100%);
+    background-size: 200% 200%;
+    animation: gradient-move 6s ease-in-out infinite alternate;
     color: #E3D095;
     text-shadow: 0px 0px 4px  #0E2148;
     transform: scale(1.05);
@@ -101,36 +103,111 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
 /*  */
 /*  */
 /*  */
-#content {
+.content {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     align-items: center;
     text-align: center;
     width: 90%;
-    justify-self: center;
-    padding: 40px 5% 0 5% ; 
+    margin: 0 auto;
+    justify-items: center;
+    padding: 40px 5% 0 5%;
 }
 
-#content img {
+.content > div, .content > img {
     width: 100%;
-    object-fit: cover;
 }
 
-#content .span2 {
+.content img {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.content .span2 {
     grid-column: 1 / span 2;
     text-align: center;
     padding: 20px;
 }
 
-#content .span3 {
+.content .span3 {
     grid-column: 1 / span 3;
     padding: 20px;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr;
+        padding: 20px 2vw 0 2vw;
+    }
+    .content .span2,
+    .content .span3 {
+        grid-column: auto;
+        padding: 12px 0;
+    }
+    .content img {
+        max-width: 90vw;
+        max-height: 30vh;
+    }
+}
+
+/* V-Content */
+.v-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    width: 95vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2vw;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide scrollbar by default */
+}
+
+.v-content > div {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.v-content img {
+    max-width: 100%;
+    max-height: 25vh;
+    object-fit: contain;
+    display: block;
+    margin: 12px auto;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+    .v-content {
+        overflow: auto; /* Enable scrollbar on small screens */
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        width: 98vw;
+        gap: 18px;
+    }
+    .v-content img {
+        max-width: 90vw;
+        max-height: 50vh;
+    }
 }
 
 .Button{
     background-color: #E3D095;
     background: linear-gradient(45deg, #483AA0 0%, #E3D095 100%);
+    background-size: 200% 200%;
+    animation: gradient-move 6s ease-in-out infinite alternate;
     color: #0E2148;
     margin: 10px;
     text-align: center;
@@ -142,7 +219,23 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
     font-size: 1.2em;
     font-family: "Lato", sans-serif;
     font-weight: 400;
+    transform: scale(0.85);
 }
+
+.Button:hover {
+    background: linear-gradient(135deg, #E3D095 0%,  #483AA0 100%);
+    background-size: 200% 200%;
+    animation: gradient-move 6s ease-in-out infinite alternate;
+    color: #E3D095;
+    transform: scale(0.9);
+    text-shadow: 0px 0px 4px  #0E2148;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/*  */
+/*  */
+/* Furry Impact */
+/*  */
+/*  */
 
 @media (max-width: 700px) {
     #Buttons {
@@ -157,4 +250,47 @@ p, b, strong, i, em, span, h1, h2, h3, h4, h5, h6 {
         margin: 6px 12vw;
         border-radius: 14px;
     }
+}
+
+/* Keyframes for animated gradient */
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.cursor-trail-paw {
+    position: fixed;
+    pointer-events: none;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%) scale(1.1) rotate(-10deg);
+    opacity: 1;
+    z-index: 9999;
+    transition: opacity 0.4s, transform 0.4s;
+    will-change: top, opacity;
+}
+.cursor-trail-paw i {
+    color: inherit;
+    text-shadow: 0 0 6px #fff3, 0 0 2px #0E2148;
+}
+
+.asteroid-paw {
+    position: fixed;
+    z-index: -1; /* Behind most UI, but above background */
+    pointer-events: none;
+    opacity: 0.8;
+    will-change: left, top, opacity, transform;
+    user-select: none;
+}
+.asteroid-paw i {
+    color: inherit;
+    text-shadow: 0 0 8px #fff6, 0 0 2px #0E2148;
 }
